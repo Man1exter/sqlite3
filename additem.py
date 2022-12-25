@@ -1,6 +1,6 @@
 import sqlite3
 
-database = sqlite3.connect("base.db")  # connect / create base -> first firstbase.db
+database = sqlite3.connect("base.db")  # connect / create base -> first base.db
 cursor = database.cursor() # navigating the database
 
 cursor.execute('''  
@@ -10,6 +10,7 @@ cursor.execute('''
           1,"Mario","Perk",22)  
            
   ''')
+
 
 # add item to database ID = 1 , NAME = MARIUSZ, SURNAME = PERZYK, SCORE = 22
 
