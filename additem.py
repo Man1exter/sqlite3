@@ -1,15 +1,17 @@
 import sqlite3
 
-databaseX = sqlite3.connect("itemadd.db")  # connect / create base -> first itemadd.db
-cursor = databaseX.cursor() # navigating the database
+database = sqlite3.connect("base.db")  # connect / create base -> first firstbase.db
+cursor = database.cursor() # navigating the database
 
 cursor.execute('''  
                
-  insert into results(id,name,surname,score)values(1,"Mariusz","Perzyk",22)  
+  INSERT INTO scores(
+      id,name,surname,result)values(
+          1,"Mario","Perk",22)  
            
- ''')
+  ''')
 
 # add item to database ID = 1 , NAME = MARIUSZ, SURNAME = PERZYK, SCORE = 22
 
-databaseX.commit()  # save changes to database
-databaseX.close() # close database
+database.commit()  # save changes to database
+database.close() # close database
