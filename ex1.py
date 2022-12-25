@@ -5,10 +5,11 @@ cursor = database.cursor() # navigating the database
 
 cursor.execute('''  
                
-  CREATE TABLE scores(           
-     id integer,
-     name string,           
-     surname string)    
+  CREATE TABLE scores (           
+      id integer,
+      name string,           
+      surname string,
+      score integer)    
            
  ''')  # select questions to database , # scores - table
 
